@@ -188,7 +188,7 @@ public class Fitness {
                 double[] mondayGapValues = new double[mondayClasses.size() - 1];
 
                 for (int i = 1; i < mondayClasses.size(); i++) {
-                    mondayGapValues[i - 1] = mondayClasses.get(i).getPosition().getTime().getHour() - mondayClasses.get(i - 1).getPosition().getTime().getHour();
+                    mondayGapValues[i - 1] = mondayClasses.retrieve(i).getPosition().getTime().getHour() - mondayClasses.retrieve(i - 1).getPosition().getTime().getHour();
                 }
 
                 double mean = 0.0;
@@ -210,7 +210,7 @@ public class Fitness {
                 double[] tuesdayGapValues = new double[mondayClasses.size() - 1];
 
                 for (int i = 1; i < tuesdayClasses.size(); i++) {
-                    tuesdayGapValues[i - 1] = tuesdayClasses.get(i).getPosition().getTime().getHour() - tuesdayClasses.get(i - 1).getPosition().getTime().getHour();
+                    tuesdayGapValues[i - 1] = tuesdayClasses.retrieve(i).getPosition().getTime().getHour() - tuesdayClasses.retrieve(i - 1).getPosition().getTime().getHour();
                 }
 
                 double mean = 0.0;
@@ -232,7 +232,7 @@ public class Fitness {
                 double[] wednesdayGapValues = new double[mondayClasses.size() - 1];
 
                 for (int i = 1; i < wednesdayClasses.size(); i++) {
-                    wednesdayGapValues[i - 1] = wednesdayClasses.get(i).getPosition().getTime().getHour() - wednesdayClasses.get(i - 1).getPosition().getTime().getHour();
+                    wednesdayGapValues[i - 1] = wednesdayClasses.retrieve(i).getPosition().getTime().getHour() - wednesdayClasses.retrieve(i - 1).getPosition().getTime().getHour();
                 }
 
                 double mean = 0.0;
@@ -254,7 +254,7 @@ public class Fitness {
                 double[] thursdayGapValues = new double[mondayClasses.size() - 1];
 
                 for (int i = 1; i < thursdayClasses.size(); i++) {
-                    thursdayGapValues[i - 1] = thursdayClasses.get(i).getPosition().getTime().getHour() - thursdayClasses.get(i - 1).getPosition().getTime().getHour();
+                    thursdayGapValues[i - 1] = thursdayClasses.retrieve(i).getPosition().getTime().getHour() - thursdayClasses.retrieve(i - 1).getPosition().getTime().getHour();
                 }
 
                 double mean = 0.0;
@@ -276,7 +276,7 @@ public class Fitness {
                 double[] fridayGapValues = new double[mondayClasses.size() - 1];
 
                 for (int i = 1; i < fridayClasses.size(); i++) {
-                    fridayGapValues[i - 1] = fridayClasses.get(i).getPosition().getTime().getHour() - fridayClasses.get(i - 1).getPosition().getTime().getHour();
+                    fridayGapValues[i - 1] = fridayClasses.retrieve(i).getPosition().getTime().getHour() - fridayClasses.retrieve(i - 1).getPosition().getTime().getHour();
                 }
 
                 double mean = 0.0;

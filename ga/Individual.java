@@ -566,7 +566,7 @@ public class Individual {
 
         /*int i = 0;
         for (Gene gene : genes) {
-            Gene geneAux = newGenes.get(i);
+            Gene geneAux = newGenes.retrieve(i);
             if (timetable[geneAux.getPosition().getClassroomId()][geneAux.getPosition().getTimeId()].isNull()) {
                 gene.setPosition(new Position(geneAux.getPosition()));
             } else {

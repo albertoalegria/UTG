@@ -38,7 +38,7 @@ public class TeacherDBManager implements DAOTeacher {
     }
 
     @Override
-    public Teacher get(int id) throws DAOException {
+    public Teacher retrieve(int id) throws DAOException {
         Teacher teacher = null;
 
         try {

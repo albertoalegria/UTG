@@ -6,6 +6,8 @@ import com.alegria.utg.model.Classroom;
 import java.util.ArrayList;
 
 /**
+ * This class was intended to represent classrooms
+ *
  * @author Alberto Alegria
  */
 public class ClassroomDBManager implements DAOClassroom {
@@ -26,7 +28,7 @@ public class ClassroomDBManager implements DAOClassroom {
     }
 
     @Override
-    public Classroom get(int id) {
+    public Classroom retrieve(int id) {
         return null;
     }
 

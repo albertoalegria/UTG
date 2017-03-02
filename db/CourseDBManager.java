@@ -13,6 +13,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
+import static com.alegria.utg.utilities.Constants.DB.Course.*;
+
 /**
  * @author Alberto Alegria
  */
@@ -39,7 +41,7 @@ public class CourseDBManager implements DAOCourse {
     }
 
     @Override
-    public Course get(int id) throws DAOException {
+    public Course retrieve(int id) throws DAOException {
         Course course = null;
 
         try {
@@ -85,7 +87,7 @@ public class CourseDBManager implements DAOCourse {
         } else {
             availableTimes = availableTimes.stream().filter(time -> time.getHour() >= 6).collect(Collectors.toCollection(ArrayList<Time>::new));
         }
-        //ArrayList<Time> times =  Data.times.stream().filter(time -> time.getShift() == shift).collect(Collectors.toCollection(ArrayList<Time>::new));
+
         return new Course.Builder()
                 .setId(resultSet.getInt("id"))
                 .setName(resultSet.getString(COL_NAME))
@@ -100,25 +102,3 @@ public class CourseDBManager implements DAOCourse {
                 .build();
     }
 }
-
-
-/*while (resultSet.next()) {
-                courseId = resultSet.getInt("id");
-                name = resultSet.getString(COL_NAME);
-                size = resultSet.getInt(COL_SIZE);
-                hours = resultSet.getInt(COL_HOURS);
-                career = resultSet.getInt(COL_CAREER);
-                shift = resultSet.getInt(COL_SHIFT);
-                type = resultSet.getInt(COL_TYPE);
-                final int tmpShift = shift;
-                times = Data.times.stream().filter(time -> time.getShift() == tmpShift).collect(Collectors.toCollection(ArrayList<Time>::new));
-            }
-            return new Course.Builder().setId(courseId)
-                    .setName(name)
-                    .setSize(size)
-                    .setHours(hours)
-                    .setCareer(career)
-                    .setShift(shift)
-                    .setType(type)
-                    .setAvailableTimes(times)
-                    .build();*/

@@ -5,13 +5,22 @@ import com.alegria.utg.utilities.Constants;
 import java.sql.*;
 
 /**
+ * This class manages the connections to the database, as well as CRUD operations.
+ *
  * @author Alberto Alegria
  */
 public class DBManager {
+
+    /*
+    * Variables that manages the connection to the database and the statements.
+    * */
     private Connection sqlConnection;
     private PreparedStatement sqlPreparedStatement;
     private ResultSet sqlResultSet;
 
+    /**
+     * Default constructor that initializes the database connection.
+     */
     public DBManager() {
         connect();
     }
